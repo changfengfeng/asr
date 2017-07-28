@@ -149,7 +149,7 @@ while not leave:
     record_to_file("recording.wav", raw_data, 2)
     # asr
     sentence = os.popen('curl -s -H "Transfer-Encoding:chunked" --data-binary @recording.wav http://120.55.182.47:8888/kaldi').read()
-    print sentence
+    print(sentence)
 
 
 stream.close()
